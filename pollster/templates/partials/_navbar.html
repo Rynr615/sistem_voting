@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark bg-primary mb-4">
+    <div class="container">
+        <a class="navbar-brand" href="/">Pollster</a>
+        {% if user.is_authenticated %}
+            <!-- Jika pengguna sudah login, tampilkan link ke halaman profil -->
+            <a class="btn btn-light" href="{% url 'profile' %}">View Profile</a>
+        {% else %}
+            <!-- Jika pengguna belum login, tampilkan link ke halaman login -->
+            <a class="btn btn-light" href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </div>
+</nav>
